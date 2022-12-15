@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -9,7 +10,9 @@ class Article(models.Model):
 	content = models.TextField(max_length=1000)
 	posted = models.DateTimeField(auto_now_add=True)
 	
-
+	def publicar(self):
+		self.posted = timezone.now()
+		self.save()
 
 	def __str__(self):
 		return self.title
