@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+LOGIN_REDIRECT_URL='/inicio'
 
 # Application definition
 
@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_post'
-    
+    'app_post'   
 ]
 
 MIDDLEWARE = [
@@ -130,6 +129,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#LOGIN CONF
-LOGIN_URL= '/login'
-LOGIN_REDIRECT_URL='../inicio/'
+
