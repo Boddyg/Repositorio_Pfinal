@@ -22,12 +22,14 @@ from app_post import views as views_post
 
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('inicio/', views.inicio, name = 'Pagina de inicio'),
     path('post/<int:id>/', views.post_detail, name="post_detail"),
     path('register/', views.register, name="register"),
     path('login/', auth_views.LoginView.as_view(template_name='login.html') , name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='index.html'), name='logout'),
-    path('publicar/', views_post.publicar_post.as_view(template_name='post/publicar.html'), name='publicar')
+    path('publicar/', views_post.publicar_post.as_view(template_name='post/publicar.html'), name='publicar'),
+    path('acercade/', views.acercade, name = 'Acerca de')
    
 ]

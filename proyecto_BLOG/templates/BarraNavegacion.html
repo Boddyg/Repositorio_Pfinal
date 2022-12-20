@@ -1,22 +1,37 @@
-<html>
-    <body>
-        <ul>
-            <li><a href=/inicio>Inicio</a></li>
-            <li><a href=/contacto>Contactos</a></li>
-            <li><a href=/acercade>Acerca de</a></li>
-        
-            {% if user.is_authenticated %}
-                <li><p>{{user.username}}</p></li>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href=/inicio>Inicio</a></li>
+                <li><a href=/contacto>Contactos</a></li>
+                <li><a href=/acercade>Acerca de</a></li>
+
+                {% if user.is_authenticated %}
+                <li><a>{{user.username}}</a></li>
                 <li><a class="nav-wrapper" href=/logout>Cerrar Sesion</a></li>
-            {% else %}
+                
+                {% else %}
                 <li><a href=/login>Iniciar Sesion</a></li>
-            {% endif %}
-            
-            <li><a href=/register>Registrarse</a></li>    
-            <li><a href="{% url 'publicar' %}" >Publicar</li></a>
+                {% endif %}
 
-        </ul>
-    </body>
+                <li><a href=/register>Registrarse</a></li>           
 
-    <!--usar { % include "BarraNavegacion.html" %}  para agregar menu-->
-</html>
+                <a href="/inicio" class="brand-logo right">Amo los Perros</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                </ul>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+
+<!--usar { % include "BarraNavegacion.html" %}  para agregar menu-->

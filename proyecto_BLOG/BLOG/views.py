@@ -36,3 +36,5 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'singup.html', {'form': form})
 
+def acercade(request):
+        return render(request, "acercade.html", {})
