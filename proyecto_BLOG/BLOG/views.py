@@ -5,6 +5,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from app_post.models import comentarios
 from app_post.forms import commentform
+from usuarios.forms import FormularioRegistro
 
 
 def inicio(request):
@@ -29,7 +30,7 @@ def register(request):
     if request.method == 'POST':
 
     	# Assigning the User Creation form with the Post request object to form variable
-        form = UserCreationForm(request.POST)
+        form = FormularioRegistro(request.POST)
         if form.is_valid():
             # Save the user
             form.save()
@@ -44,6 +45,6 @@ def register(request):
             login(request, user)
             return redirect('/')
     else:
-        form = UserCreationForm()
+        form = FormularioRegistro()
     return render(request, 'singup.html', {'form': form})
 

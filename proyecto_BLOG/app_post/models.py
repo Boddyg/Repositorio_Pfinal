@@ -22,7 +22,7 @@ class comentarios(models.Model):
 	nombre=models.CharField(max_length=150)
 	correo=models.EmailField()
 	contenido= models.TextField(max_length=600)
-	creado_en=models.DateField()
+	creado_en=models.DateField(auto_now_add=True)
 	active=models.BooleanField(default=False)
 	
 	def __str__(self):

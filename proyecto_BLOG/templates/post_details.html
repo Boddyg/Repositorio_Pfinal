@@ -33,13 +33,20 @@
       </div>
       <section>
          <div>
-            <form action="post">
+            <form action="" method="post">
+
                {% csrf_token %}
+
                {{form.as_p}}
+
+               <input type="submit" name="Enviar" value="comentar">
+
             </form>
-            {% for comentario in comment %}
-            <p> {{comentario.nombre} {{comentario.contenido}}</p>
-               
+
+
+            {% for comentario in comments %}
+            <p> {{comentario.nombre}} {{comentario.contenido}}</p>
+
             {% endfor %} 
          </div>
       </section>
