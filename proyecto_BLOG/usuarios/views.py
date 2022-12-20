@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+
 from django.views.generic import CreateView
+from .forms import FormularioRegistro
 
 
 # Create your views here.
@@ -9,6 +10,6 @@ from django.views.generic import CreateView
 class registroUsuario(CreateView):
     model=User
     template_name='templates/singup.html'
-    form_class=UserCreationForm
+    form_class=FormularioRegistro
     success_url= redirect('inicio/')
     

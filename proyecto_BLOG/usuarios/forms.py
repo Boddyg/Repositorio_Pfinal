@@ -7,7 +7,7 @@ class FormularioRegistro(UserCreationForm):
 
     class Meta:
         model = Usuario
-        fields = ["telefono", 'es_admin' ]
+        fields = ["username", "email", "password1", "password2", "telefono" ]
         labels = {
             'telefono' : 'Teléfono:',
             'es_admin': 'Es admin'
