@@ -2,6 +2,7 @@ from .models import Article
 from django.views.generic import CreateView
 from .forms import postearform
 from django.urls import reverse
+
 class publicar_post(CreateView):
     model= Article
     tamplate_name='post/publicar.html'

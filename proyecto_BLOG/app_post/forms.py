@@ -1,5 +1,6 @@
 from django import forms
-from .models import Article
+from .models import Article, comentarios
+from django.forms import ModelForm
 
 class postearform(forms.ModelForm):
     class Meta:
@@ -10,3 +11,9 @@ class postearform(forms.ModelForm):
             'preview': 'Vista previa',
             'content': 'Contenido',
         }
+
+class commentform(ModelForm):
+    class Meta:
+        model= comentarios
+        fields= ('nombre', 'correo', 'contenido', 'active')
+
