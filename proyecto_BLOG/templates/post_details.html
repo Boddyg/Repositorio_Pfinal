@@ -31,6 +31,19 @@
             </div>
          </div>
       </div>
+      <section>
+         <div>
+            <form action="post">
+               {% csrf_token %}
+               {{form.as_p}}
+            </form>
+            {% for comentario in comment %}
+            <p> {{comentario.nombre} {{comentario.contenido}}</p>
+               
+            {% endfor %} 
+         </div>
+      </section>
+
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       
