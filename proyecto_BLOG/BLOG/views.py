@@ -15,7 +15,7 @@ def inicio(request):
 
 def post_detail(request, id):
         post = get_object_or_404(Article, id=id)
-        coments= post.comments.filter(active=True)
+        coments= post.comments.all()
         if request.method == 'POST':
             form= commentform(request.POST)
             if form.is_valid():
