@@ -11,5 +11,5 @@ class registroUsuario(CreateView):
     model=User
     template_name='templates/singup.html'
     form_class=FormularioRegistro
-    success_url= redirect('inicio/')
+    
     
