@@ -11,4 +11,8 @@ class registroUsuario(CreateView):
     model=User
     template_name='templates/singup.html'
     form_class=FormularioRegistro
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 71f135b78be80667e109a1dd374978cf2a96a1bd
     

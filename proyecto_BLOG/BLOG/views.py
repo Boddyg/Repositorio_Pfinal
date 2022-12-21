@@ -50,3 +50,7 @@ def register(request):
 
 def acercade(request):
         return render(request, "acercade.html", {})
+
+def contactos(request):
+    return render(request, "contacto.html", {})
+        
