@@ -10,8 +10,8 @@ class FormularioRegistro(UserCreationForm):
         fields = ["username", "email", "password1", "password2", "telefono" ]
         labels = {
             'telefono' : 'Teléfono:',
-            'username': 'Nombre de usuario',
-            'email': 'Correo',
-            'password1': 'contraseña',
-            'password2': 'contraseña',
+            'es_admin': 'Es admin',
+            'email' : 'Correo',
+            'password1' : 'contraseña',
+            'password2' : 'contraseña',
         }
