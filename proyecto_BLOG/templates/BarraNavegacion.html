@@ -13,19 +13,19 @@
             <ul>
                 <li><a href="{% url 'Pagina de inicio' %}">Inicio</a></li>
                 <li><a href=/contacto>Contactos</a></li>
-                <li><a href=/acercade>Acerca de</a></li>
+                <li><a href="{% url 'Acerca de' %}">Acerca de</a></li>
 
                 {% if user.is_authenticated %}
                 <li><a>{{user.username}}</a></li>
-                <li><a class="nav-wrapper" href=/logout>Cerrar Sesion</a></li>
+                <li><a class="nav-wrapper" href="{% url 'logout' %}">Cerrar Sesion</a></li>
                 
                 {% else %}
-                <li><a href=/login>Iniciar Sesion</a></li>
+                <li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
                 {% endif %}
 
-                <li><a href=/register>Registrarse</a></li>           
+                <li><a href="{% url 'register' %}">Registrarse</a></li>           
 
-                <a href="/inicio" class="brand-logo right">Amo los Perros</a>
+                <a href="{% url 'Pagina de inicio' %}" class="brand-logo right">Amo los Perros</a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                 </ul>
             </ul>
