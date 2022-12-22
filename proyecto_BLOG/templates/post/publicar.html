@@ -9,7 +9,7 @@
         {% include "BarraNavegacion.html" %}
     </nav>
     <h2>Crea tu publicación</h2>
-    <form method="post" style="width: 50%;">{% csrf_token %}
+    <form method="post" class="brand-logo center" style="width: 50%;">{% csrf_token %}
         
         {{ form.as_p }}
         
