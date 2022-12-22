@@ -12,7 +12,7 @@
         <div class="nav-wrapper">
             <ul>
                 <li><a href="{% url 'Pagina de inicio' %}">Inicio</a></li>
-                <li><a href="{% url 'Contactos' %}">Contactos</a></li>
+                <li><a onclick="topFunction()" id="myBtn" title="Go to top">Contactos</a></li>
                 <li><a href="{% url 'Acerca de' %}">Acerca de</a></li>
 
                 {% if user.is_authenticated %}
@@ -35,3 +35,10 @@
 
 
 <!--usar { % include "BarraNavegacion.html" %}  para agregar menu-->
+
+<script>
+    let mybutton = document.getElementById("myBtn");
+    function topFunction() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
