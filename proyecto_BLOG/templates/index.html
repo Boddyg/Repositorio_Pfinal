@@ -3,11 +3,16 @@
 <head>
    <!--Import Google Icon Font-->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
    <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
    <!--Let browser know website is optimized for mobile-->
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="css/estilo.css" />
+   <link rel="stylesheet" href="css/estiloIcon.css" />
+
+   <!-- Add icon library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
       footer {
          text-align: center;
@@ -15,9 +20,21 @@
          background-color: Gray;
          color: white;
       }
+
+      .button {
+         background-color: #1e90ff;
+         border: none;
+         color: white;
+         padding: 10px 32px;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 15px;
+         margin: 4px 2px;
+         cursor: pointer;
+         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
    </style>
-   <!-- Add icon library -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -51,7 +68,9 @@
       {% if user.is_superuser or user.es_admin %}
       <a class="button right" href="{% url 'publicar' %}">Publicar</a>
       {% endif %}
-      <br></br>
+      <br>
+      <br>
+      <br>
 
    </div>
    <footer>
@@ -59,8 +78,8 @@
       <li>Correo: cotelaichaco@gmail.com</li>
       <li>Celular: 3644308298</li>
       <li>Redes Sociales:</li>
-      <a target="blank" href="https://www.facebook.com/groups/380502425339061">Facebook</a>
-      <a target="blank" href="https://www.instagram.com/amo_los_perros_sp/">Instagram</a>
+      <a target="blank" class="fa fa-facebook" href="https://www.facebook.com/groups/380502425339061"> Facebook</a>
+      <a target="blank" class="fa fa-instagram" href="https://www.instagram.com/amo_los_perros_sp/"> Instagram</a>
       <br></br>
       <!-- Add font awesome icons -->
       <!-- <a target="blank" href="https://www.facebook.com/groups/380502425339061" class="fa fa-facebook"></a>
