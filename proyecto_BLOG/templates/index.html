@@ -8,6 +8,16 @@
    <!--Let browser know website is optimized for mobile-->
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="css/estilo.css" />
+   <style>
+      footer {
+         text-align: center;
+         padding: 3px;
+         background-color: Gray;
+         color: white;
+      }
+   </style>
+   <!-- Add icon library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -37,72 +47,25 @@
          </div>
          {% endfor %}
       </div>
-      
+
       {% if user.is_superuser or user.es_admin %}
-      <a class="button right"  href="{% url 'publicar' %}">Publicar</a>
+      <a class="button right" href="{% url 'publicar' %}">Publicar</a>
       {% endif %}
-         
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
+      <br></br>
 
    </div>
    <footer>
-      <li>Contactos</li>
-      <li>3644308298</li>
-      <li>Redes Sociales:
-         ●	Facebook: Grupo “Amo los Perros SP” https://www.facebook.com/groups/380502425339061
-         ●	Instagram: @amo_los_perros_sp https://www.instagram.com/amo_los_perros_sp/
-         </li>
-      <li></li>
-      <li></li>
-  </footer>
+      <h4>Contacto</h4>
+      <li>Correo: cotelaichaco@gmail.com</li>
+      <li>Celular: 3644308298</li>
+      <li>Redes Sociales:</li>
+      <a target="blank" href="https://www.facebook.com/groups/380502425339061">Facebook</a>
+      <a target="blank" href="https://www.instagram.com/amo_los_perros_sp/">Instagram</a>
+      <br></br>
+      <!-- Add font awesome icons -->
+      <!-- <a target="blank" href="https://www.facebook.com/groups/380502425339061" class="fa fa-facebook"></a>
+      <a target="blank" href="https://www.instagram.com/amo_los_perros_sp/" class="fa fa-instagram"></a> -->
+   </footer>
    <!--JavaScript at end of body for optimized loading-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
