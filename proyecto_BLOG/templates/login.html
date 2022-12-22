@@ -22,13 +22,13 @@
       </ul>
     </div>
   </nav>
-  <form class='post' cmethod="post">
+  <form class='post' method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Iniciar Sesion</button>
   </form>
   {% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
+  <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
   {% endif %}
   
 </body>
